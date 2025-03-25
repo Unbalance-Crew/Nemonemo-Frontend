@@ -6,7 +6,7 @@ export interface Login {
 export interface SignUp {
     username: string;
     password: string;
-    athority?: string;
+    athority: string;
 };
 
 export interface AuthResponse {

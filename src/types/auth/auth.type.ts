@@ -6,7 +6,7 @@ export interface Login {
 export interface SignUp {
     username: string;
     password: string;
-    athority: string;
+    authority: string;
 };
 
 export interface AuthResponse {
@@ -14,6 +14,6 @@ export interface AuthResponse {
     refreshToken: string;
 };
 
-export interface NewAccessToken {
+export interface NewAccessToken extends Response {
     accessToken: string;
 };

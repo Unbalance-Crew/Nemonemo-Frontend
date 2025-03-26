@@ -10,6 +10,5 @@ export const requestInterceptor = (
     } else {
         config.headers[REQUEST_TOKEN] = `Bearer ${ACCESS_TOKEN}`;
     }
-
     return config;
 };

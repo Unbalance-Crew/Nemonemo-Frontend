@@ -3,10 +3,9 @@ export interface Login {
     password: string;
 };
 
-export interface SignUp {
+export interface Register {
     username: string;
     password: string;
-    authority: string;
 };
 
 export interface AuthResponse {
@@ -14,6 +13,6 @@ export interface AuthResponse {
     refreshToken: string;
 };
 
-export interface NewAccessToken extends Response {
+export interface TokenResponse {
     accessToken: string;
 };

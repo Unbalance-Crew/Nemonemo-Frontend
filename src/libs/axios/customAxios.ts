@@ -39,11 +39,16 @@ const addRefreshSubscriber = ( callback: ( token: string ) => void ) => {
 };
 
 nemonemoAxios.interceptors.request.use(
-
-);
-
-nemonemoAxios.interceptors.response.use(
-
+    (config) => {
+        const accessToken = Token.getToken(ACCESS_TOKEN);
+        if (accessToken) {
+            config.headers[REQUEST_TOKEN] = `Bearer ${accessToken}`;
+        }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    },
 );
 
 export default nemonemoAxios;

@@ -1,6 +1,8 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { REQUEST_TOKEN, ACCESS_TOKEN } from "@/constants/token/token.constants";
 import { Token } from "@/libs/token/token";
+import { requestInterceptor } from '@/libs/axios/request.interceptor';
+import { responseInterceptor } from "./response.interceptor";
 
 const SERVER_URL = process.env.VITE_SERVER_URL;
 
@@ -23,3 +25,6 @@ export const nemonemoAxios = createCustomAxiosInstance({
         [REQUEST_TOKEN]: `Bearer ${Token.getToken(ACCESS_TOKEN)}`,
     },
 });
+
+nemonemoAxios.interceptors.request.use((res) => res, requestInterceptor);
+nemonemoAxios.interceptors.response.use((res) => res, responseInterceptor);

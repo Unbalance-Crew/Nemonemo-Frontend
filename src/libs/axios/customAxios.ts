@@ -1,11 +1,15 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
-import { ACCESS_TOKEN, REFRESH_TOKEN, REQUEST_TOKEN } from '@/constants/token/token.constants';
+import {
+    ACCESS_TOKEN,
+    REFRESH_TOKEN,
+    REQUEST_TOKEN,
+} from '@/constants/token/token.constants';
 import { BaseResponse } from '@/types/response/base.response';
 import { TokenResponse } from '@/types/auth/auth';
-import { Token } from '@/libs/token/session';
+import { Token } from '@/libs/token/token';
 
 interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
-    retry?: boolean;
+    retry: boolean;
 };
 
 const nemonemoAxios = axios.create({

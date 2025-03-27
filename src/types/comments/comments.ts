@@ -1,4 +1,4 @@
-export interface Coment {
+export interface Comment {
     content: string;
 };
 

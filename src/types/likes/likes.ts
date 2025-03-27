@@ -1,5 +1,5 @@
-export interface LikeResponse {
-    postId: number;
+export interface LikeResppnse {
+    postOd: number;
     liked: boolean;
     likeCount: number;
 };

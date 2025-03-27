@@ -1,5 +1,5 @@
 import { nemonemoAxios } from "@/libs/axios/axios";
-import { Login, Register, AuthResponse, TokenResponse } from "@/types/auth/auth";
+import { Login, Register, AuthResponse, NewAccessToken } from "@/types/auth/auth";
 
 const SERVER_URL = process.env.VITE_SERVER_URL;
 
@@ -21,9 +21,9 @@ export const register = async (registerData: Register): Promise<AuthResponse> =>
     };
 };
 
-export const refresh = async (refreshToken: { refreshToken: string | null }): Promise<TokenResponse> => {
+export const refresh = async (refreshToken: { refreshToken: string | null }): Promise<NewAccessToken> => {
     try {
-        const { data } = await nemonemoAxios.post<TokenResponse>(`${SERVER_URL}/api/auth/reissue`, refreshToken);
+        const { data } = await nemonemoAxios.post<NewAccessToken>(`${SERVER_URL}/api/auth/reissue`, refreshToken);
         return data;
     } catch (error) {
         throw new Error("토큰 재발급 요청 실패");

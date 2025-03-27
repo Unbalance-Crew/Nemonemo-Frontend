@@ -1,5 +1,5 @@
 export interface LikeResppnse {
-    postOd: number;
+    postId: number;
     liked: boolean;
     likeCount: number;
 };

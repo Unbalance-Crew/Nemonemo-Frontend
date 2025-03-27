@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Layouts from '@/layouts';
 import Home from '@/pages/home';
 import Login from '@/pages/login';
 import Register from '@/pages/register';
@@ -11,14 +10,13 @@ const Router = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path='/' element={<Layouts />}>
-                    <Route index element={<Home />} />
-                    <Route path='/search' element={<Search />} />
-                    <Route path='/create' element={<Create />} />
-                    <Route path='/profile' element={<Profile />} />
-                </Route>
+                <Route index element={<Home />} />
+                <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />
+                <Route path='/search' element={<Search />} />
+                <Route path='/create' element={<Create />} />
+                <Route path='/profile' element={<Profile />} />
             </Routes>
         </BrowserRouter>
     );

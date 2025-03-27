@@ -6,11 +6,9 @@ const Header = () => {
     const navigate = useNavigate();
     return (
         <S.Container>
-            <S.Header>
                 <S.Logo onClick={() => navigate('/')}>
                     <img src={Logo} alt='로고' />
                 </S.Logo>
-            </S.Header>
         </S.Container>
     );
 };

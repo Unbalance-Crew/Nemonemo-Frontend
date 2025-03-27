@@ -3,7 +3,11 @@ import * as S from './style';
 const Footer = () => {
     return (
         <S.Container>
-            <div>푸터 영역</div>
+            <S.FooterContainer>
+                    <S.TextWrapper>
+                        <S.Text>Copyright 2025. NemoNemo All rights reserved</S.Text>
+                    </S.TextWrapper>
+            </S.FooterContainer>
         </S.Container>
     );
 };

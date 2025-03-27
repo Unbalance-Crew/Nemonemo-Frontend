@@ -5,6 +5,7 @@ import Login from '@/pages/login';
 import Register from '@/pages/register';
 import Search from '@/pages/search';
 import Create from '@/pages/create';
+import Profile from '@/pages/profile';
 
 const Router = () => {
     return (
@@ -14,6 +15,7 @@ const Router = () => {
                     <Route index element={<Home />} />
                     <Route path='/search' element={<Search />} />
                     <Route path='/create' element={<Create />} />
+                    <Route path='/profile' element={<Profile />} />
                 </Route>
                 <Route path='/login' element={<Login />} />
                 <Route path='/register' element={<Register />} />

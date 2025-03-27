@@ -1,7 +1,4 @@
-import {
-    ACCESS_TOKEN,
-    REFRESH_TOKEN,
-} from "@/constants/token/token.constants";
+import { ACCESS_TOKEN, REFRESH_TOKEN } from "@/constants/token/token.constants";
 
 export const Token = {
     getToken: (key: string): string | null => {

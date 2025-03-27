@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
-import { REQUEST_TOKEN, ACCESS_TOKEN } from "@/constants/token/token.constants";
+import { ACCESS_TOKEN, REQUEST_TOKEN } from "@/constants/token/token.constants";
 import { Token } from "@/libs/token/token";
 import { requestInterceptor } from '@/libs/axios/request.interceptor';
 import { responseInterceptor } from "./response.interceptor";

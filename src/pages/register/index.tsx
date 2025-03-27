@@ -1,6 +1,6 @@
 import * as S from './style';
 
-const Signup = () => {
+const Register = () => {
     return (
         <S.Container>
             <div>회원가입</div>
@@ -8,4 +8,4 @@ const Signup = () => {
     );
 };
 
-export default Signup;
+export default Register;

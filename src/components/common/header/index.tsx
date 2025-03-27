@@ -9,7 +9,7 @@ const Header = () => {
         <S.Container>
             <S.HeaderWrap>
                 <S.Logo onClick={() => navigate('/')}>
-                    <Logo />
+                    <img src={Logo} alt="로고" />
                 </S.Logo>
                 <S.MenuWrap>
                     <S.Menu>

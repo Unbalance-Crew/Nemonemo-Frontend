@@ -1,9 +1,10 @@
 import * as S from './style';
+import Banner from '@/components/common/banner';
 
 const Home = () => {
     return (
         <S.Container>
-            <div>홈</div>
+            <Banner />
         </S.Container>
     );
 };

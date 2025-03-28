@@ -1,10 +1,9 @@
 import * as S from './style';
-import Header from '@/components/common/header';
 
 const Home = () => {
     return (
         <S.Container>
-            <Header />
+            <div>홈</div>
         </S.Container>
     );
 };

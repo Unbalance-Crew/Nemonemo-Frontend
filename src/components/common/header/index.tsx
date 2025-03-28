@@ -13,7 +13,7 @@ const Header = () => {
                 </S.Logo>
                 <S.MenuWrap>
                     <S.Menu>
-                        <S.MenuItem onClick={() => navigate('/search')}>검색</S.MenuItem>
+                        <S.MenuItem onClick={() => navigate('/search')}>Search</S.MenuItem>
                         <S.MenuItem onClick={() => navigate('/create')}>만들기</S.MenuItem>
                         <S.MenuItem onClick={() => navigate('/profile')}>프로필</S.MenuItem>
                     </S.Menu>

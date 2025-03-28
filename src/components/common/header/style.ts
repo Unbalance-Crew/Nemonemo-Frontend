@@ -5,7 +5,7 @@ export const Container = styled.header`
     height: 3.5rem;
     background-color: #FFFFFF;
     position: absolute;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #E0E0E0;
     top: 0;
     left: 0;
     display: flex;
@@ -41,9 +41,10 @@ export const Menu = styled.ul`
 export const MenuItem = styled.li`
     font-size: 15px;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 5px 10px;
     font-weight: 300;
     border-radius: 10px;
+    border: 0.6px solid #C8C8C8;
 
     &:hover {
         background-color: #E0E0E0;

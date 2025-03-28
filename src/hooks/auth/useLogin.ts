@@ -33,16 +33,12 @@ const useLogin = () => {
         try {
             const response = await login(loginData);
 
-            const accessToken = response.accessToken;
-            const refreshToken = response.refreshToken;
-
-            Token.setToken(ACCESS_TOKEN, accessToken);
-            Token.setToken(REFRESH_TOKEN, refreshToken);
+            Token.setToken(ACCESS_TOKEN, response.accessToken);
+            Token.setToken(REFRESH_TOKEN, response.refreshToken);
 
             Toast('로그인에 성공했습니다!', 'SUCCESS');
 
             navigate('/');
-
         } catch (error) {
             Toast('로그인에 실패했습니다!', 'ERROR');
         };

@@ -4,14 +4,22 @@ import { Register } from '@/types/auth/auth';
 import { register } from '@/api/auth/auth.api';
 import Toast from '@/libs/toast/toast';
 
-const useSignup = () => {
+const isValidateUserName = ( username: string ) => {
+    return /^[a-zA-Z0-9]{4,12}$/.test(username);
+};
+
+const isValidatePassword = ( password: string ) => {
+    return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+};
+
+const useRegister= () => {
     const navigate = useNavigate();
 
     const [ registerData, setRegisterData ] = useState<Register>({
         name: '',
         username: '',
         password: '',
-    })
+    });
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -29,8 +37,18 @@ const useSignup = () => {
             return;
         };
 
+        if (!isValidateUserName(username)) {
+            Toast('아이디는 4자 이상 12자 이하여야 합니다!', 'ERROR');
+            return;
+        };
+
+        if (!isValidatePassword(password)) {
+            Toast("error", "비밀번호는 8자 이상, 숫자, 문자, 특수문자를 포함해야합니다!");
+            return;
+        };
+
         try {
-            const response = await register(registerData);
+            await register(registerData);
 
             Toast('회원가입에 성공했습니다!', 'SUCCESS');
 
@@ -47,3 +65,5 @@ const useSignup = () => {
         handleRegister,
     };
 };
+
+export default useRegister;

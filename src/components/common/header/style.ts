@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
     width: 100%;
-    height: 3.5rem;
+    height: 4rem;
     background-color: #FFFFFF;
     position: absolute;
-    border-bottom: 1px solid #E0E0E0;
     top: 0;
     left: 0;
     display: flex;
@@ -21,7 +20,7 @@ export const HeaderWrap = styled.div`
 
 export const Logo = styled.div`
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 2.4rem;
 `
 
 export const MenuWrap = styled.nav`

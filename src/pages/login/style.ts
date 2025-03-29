@@ -56,13 +56,13 @@ export const LoginInput = styled.input`
 export const ButtonContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
     width: 24.3rem;
 `
 
 export const LoginButton = styled.button`
     width: 100%;
-    height: 2.9rem;
+    height: 3rem;
     color: white;
     margin-left: 1.5rem;
     background-color: #3674B5;

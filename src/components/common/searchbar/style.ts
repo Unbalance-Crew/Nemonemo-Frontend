@@ -44,6 +44,7 @@ export const InputContainer = styled.div`
         padding-left: 0.7rem;
         border-radius: 20px;
         font-size: 0.9rem;
+        spellcheck: false;
 
         &:focus {
             outline: none;

@@ -1,9 +1,15 @@
 import * as S from './style';
+import Logo from '@/assets/logo.svg';
 
 const Login = () => {
     return (
         <S.Container>
-            <div>로그인</div>
+            <S.LogoContainer>
+                <img src={Logo} alt="로고" />
+            </S.LogoContainer>
+            
+            <S.LoginContainer>
+            </S.LoginContainer>
         </S.Container>
     );
 };

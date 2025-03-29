@@ -30,7 +30,7 @@ export const MenuWrap = styled.nav`
 
 export const Menu = styled.ul`
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     list-style: none;
     padding: 0;
     margin: 0;

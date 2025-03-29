@@ -46,6 +46,11 @@ export const InputContainer = styled.div`
         border: 0.03rem solid #D9D9D9;
         padding-left: 0.5rem;
 
+        &:focus {
+            outline: none;
+            border: 0.07rem solid #000000;
+        }
+
         @media (max-width: 768px) {
             width: 90%;
             font-size: 1rem;

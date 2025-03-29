@@ -24,7 +24,7 @@ const Login = () => {
                     <S.LoginInput type="password" placeholder="비밀번호 입력" />
                 </S.InputGroup>
                 <S.ButtonContainer>
-                    <S.LoginButton>로그인</S.LoginButton>
+                    <S.LoginButton type='button'>로그인</S.LoginButton>
                 </S.ButtonContainer>
             </S.LoginForm>
             <S.LinkContainer>

@@ -6,7 +6,7 @@ import {
     REQUEST_TOKEN
 } from "@/constants/token/token.constants";
 import { refresh } from "@/api/auth/auth.api";
-import { nemonemoAxios } from "@/libs/axios/axios";
+import { motreeAxios } from "@/libs/axios/axios";
 
 let isRefreshing = false;
 let refreshSubscribers: (( accessToken: string ) => void)[] = [];
@@ -45,7 +45,7 @@ export const responseInterceptor = async( error: AxiosError ) => {
                 try {
                     const newAccessToken = await refresh({ refreshToken: usingRefreshToken });
 
-                    nemonemoAxios.defaults.headers.common[
+                    motreeAxios.defaults.headers.common[
                         REQUEST_TOKEN
                         ] = `Bearer ${newAccessToken}`;
 
@@ -63,7 +63,7 @@ export const responseInterceptor = async( error: AxiosError ) => {
             return new Promise((resolve) => {
                 addRefreshSubscriber((accessToken: string) => {
                     originalRequest!.headers![REQUEST_TOKEN] = `Bearer ${accessToken}`;
-                    resolve(nemonemoAxios(originalRequest!));
+                    resolve(motreeAxios(originalRequest!));
                 });
             });
         };

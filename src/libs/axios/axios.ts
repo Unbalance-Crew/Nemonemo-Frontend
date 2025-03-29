@@ -19,12 +19,12 @@ const createCustomAxiosInstance = (baseUrl?: AxiosRequestConfig) => {
     });
 };
 
-export const nemonemoAxios = createCustomAxiosInstance({
+export const motreeAxios = createCustomAxiosInstance({
     baseURL: SERVER_URL,
     headers: {
         [REQUEST_TOKEN]: `Bearer ${Token.getToken(ACCESS_TOKEN)}`,
     },
 });
 
-nemonemoAxios.interceptors.request.use((res) => res, requestInterceptor);
-nemonemoAxios.interceptors.response.use((res) => res, responseInterceptor);
+motreeAxios.interceptors.request.use((res) => res, requestInterceptor);
+motreeAxios.interceptors.response.use((res) => res, responseInterceptor);

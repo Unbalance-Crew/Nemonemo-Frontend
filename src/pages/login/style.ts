@@ -22,7 +22,7 @@ export const LoginForm = styled.div`
     display: flex;
     flex-direction: column;
     width: 22rem;
-    gap: 1.5rem;
+    gap: 1rem;
 `
 
 export const InputGroup = styled.div`
@@ -71,6 +71,10 @@ export const LoginButton = styled.button`
     border-radius: 1rem;
     font-size: 1rem;
     outline: none;
+
+    &:hover {
+        background-color: #2c5f8d;
+    }
 `
 
 export const LinkContainer = styled.div`
@@ -86,5 +90,9 @@ export const LinkText = styled.p`
         color: #3674B5;
         font-weight: bold;
         cursor: pointer;
+
+    &:hover {
+        color: #2c5f8d;
     }
+}
 `

@@ -1,7 +1,14 @@
 import * as S from './style';
 import Logo from '@/assets/logo.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate();
+
+    const handleLinkRegister = () => {
+        navigate('/register');
+    };
+
     return (
         <S.Container>
             <S.LogoContainer>
@@ -21,7 +28,7 @@ const Login = () => {
                 </S.ButtonContainer>
             </S.LoginForm>
             <S.LinkContainer>
-                <S.LinkText>계정이 없다면 <span>회원가입</span></S.LinkText>
+                <S.LinkText>계정이 없다면 <span onClick={handleLinkRegister}>회원가입</span></S.LinkText>
             </S.LinkContainer>
         </S.Container>
     );

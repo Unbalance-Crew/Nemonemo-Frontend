@@ -14,8 +14,7 @@ export const Text = styled.div`
     margin-bottom: 0.5rem;
     margin-left: 0.2rem;
     width: 13rem;
-    padding: 0.2rem;
-    color: #686868;
+    padding: 0.3rem;
     background-color: #FFDD61;
     border-radius: 10px;
     padding-left: 0.5rem;

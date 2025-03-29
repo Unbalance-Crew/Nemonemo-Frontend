@@ -10,7 +10,7 @@ export const requestInterceptor = (
     config: InternalAxiosRequestConfig
 ): InternalAxiosRequestConfig | Promise<InternalAxiosRequestConfig> => {
     if (Token.getToken(REFRESH_TOKEN) === null) {
-        window.location.href = "login";
+        window.location.href = "/login";
     } else {
         config.headers[REQUEST_TOKEN] = `Bearer ${ACCESS_TOKEN}`;
     }

@@ -1,9 +1,10 @@
 import * as S from './style';
+import SearchBar from '@/components/common/searchbar';
 
 const Search = () => {
     return (
         <S.Container>
-            <div>검색</div>
+                <SearchBar />
         </S.Container>
     );
 };

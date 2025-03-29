@@ -16,7 +16,7 @@ const Toast = (message: string, type: string): void => {
     default:
       toast(message, { position: 'top-right' });
       break;
-  }
+  };
 };
 
 export default Toast;

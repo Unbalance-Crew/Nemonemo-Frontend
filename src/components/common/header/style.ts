@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
     width: 100%;
-    height: 4rem;
+    height: 5rem;
     background-color: #FFFFFF;
     position: absolute;
     top: 0;
@@ -30,21 +30,19 @@ export const MenuWrap = styled.nav`
 
 export const Menu = styled.ul`
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-right: 20px;
+    margin-right: 1.5rem;
 `
 
 export const MenuItem = styled.li`
     font-size: 15px;
     cursor: pointer;
     padding: 5px 10px;
-    font-weight: 300;
+    font-weight: 400;
     border-radius: 10px;
-    border: 0.6px solid #C8C8C8;
-
     &:hover {
         background-color: #E0E0E0;
         transition: 0.4s;

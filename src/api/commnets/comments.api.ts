@@ -14,7 +14,7 @@ export const createComments = async (postId: number, content: string): Promise<C
 
 export const getComments = async (postId: number): Promise<CommentResponse[]> => {
     try {
-        const { data } = await motreeAxios.get<CommentResponse[]>(`${SERVER_URL}/api/comments/${postId}`);
+        const { data } = await motreeAxios.get<CommentResponse[]>(`${SERVER_URL}/api/posts/${postId}/comments`);
         return data;
     } catch (error) {
         throw new Error("댓글 조회 요청 실패");

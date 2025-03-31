@@ -3,7 +3,7 @@ import * as S from './style';
 const PostBox = () => {
     return (
         <S.Container>
-            <div></div>
+            <div>포스트 박스</div>
         </S.Container>
     );
 };

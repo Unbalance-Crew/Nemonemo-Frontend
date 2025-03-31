@@ -4,7 +4,7 @@ export interface FollowUnFollowResponse {
     followed: boolean;
 };
 
-export interface getFollowResponse {
+export interface getFollowListResponse {
     id: number;
     username: string;
     name: string;

@@ -1,12 +1,36 @@
 import { useState, useEffect } from 'react';
 import { isAuthenticated } from '@/utils/auth';
+import { getMyInfo } from '@/api/member/member.api';
 
-export const useAuth = () => {
-    const [ isLogged, setIsLogged ] = useState<boolean>(false);
+const useAuth = () => {
+    const [isLogin, setIsLogin] = useState<boolean>(false);
+    const [userInfo, setUserInfo] = useState<{ username: string, profileImage: string } | null>(null);
 
     useEffect(() => {
-        setIsLogged(isAuthenticated());
-    }, []);
+        const checkLoginStatus = async () => {
+            const authenticated = await isAuthenticated();
 
-    return { isLogged };
+            if (authenticated) {
+                setIsLogin(true);
+
+                try {
+                    const { username, profileImagePath } = await getMyInfo();
+                    setUserInfo({
+                        username, 
+                        profileImage: profileImagePath || '',  
+                    });
+                } catch (error) {
+                    setUserInfo(null);
+                }
+            } else {
+                setIsLogin(false);
+                setUserInfo(null);
+            }
+        };
+
+        checkLoginStatus();
+    }, []);
+    return { isLogin, userInfo };
 };
+
+export default useAuth;

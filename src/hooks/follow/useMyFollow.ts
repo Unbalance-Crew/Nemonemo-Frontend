@@ -7,13 +7,21 @@ const useMyFollow = () => {
     const [myFollowersList, setMyFollowersList] = useState<getFollowListResponse[]>([]);
 
     const fetchFollowingList = async () => {
-        const data = await getMyFollowingList();
-        setMyFollowingList(data);
+        try {
+            const data = await getMyFollowingList();
+            setMyFollowingList(data);
+        } catch (error) {
+            console.error("내 팔로잉 목록 가져오기 실패", error);
+        };
     };
 
     const fetchFollowersList = async () => {
-        const data = await getMyFollowersList();
-        setMyFollowersList(data);
+        try {
+            const data = await getMyFollowersList();
+            setMyFollowersList(data);
+        } catch (error) {
+            console.error("내 팔로워 목록 가져오기 실패", error);
+        };
     };
 
     useEffect(() => {

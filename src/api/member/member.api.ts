@@ -20,3 +20,23 @@ export const getMemberInfo = async (username: string): Promise<getInfoResponse> 
         throw new Error("회원 정보 조회 요청 실패");
     };
 };
+
+export const profileImageUpload = async (file: File): Promise<getInfoResponse> => {
+    try {
+        const formData = new FormData();
+        formData.append("file", file);
+
+        const { data } = await motreeAxios.post<getInfoResponse>(
+            `${SERVER_URL}/api/members/me/profile-image`,
+            formData,
+            {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            }
+        );
+        return data;
+    } catch (error) {
+        throw new Error("프로필 이미지 업로드 요청 실패");
+    };
+};

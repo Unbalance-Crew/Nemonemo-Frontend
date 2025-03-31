@@ -32,7 +32,7 @@ export const getFollowerList = async (id: number): Promise<getFollowListResponse
 
 export const getMyFollowingList = async (): Promise<getFollowListResponse[]> => {
     try {
-        const { data } = await motreeAxios.get<getFollowListResponse[]>(`${SERVER_URL}/api/follows/my/ollowing`);
+        const { data } = await motreeAxios.get<getFollowListResponse[]>(`${SERVER_URL}/api/follows/my/following`);
         return data;
     } catch (error) {
         throw new Error("내 팔로우 목록 요청 실패");

@@ -14,6 +14,6 @@ export interface AuthResponse {
     refreshToken: string;
 };
 
-export interface NewAccessToken extends Response {
+export interface NewAccessToken {
     accessToken: string;
 };

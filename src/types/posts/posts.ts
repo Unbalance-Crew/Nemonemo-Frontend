@@ -8,4 +8,3 @@ export interface getPostsResponse {
     likeCount: number;
     commentCount: number;
 };
-

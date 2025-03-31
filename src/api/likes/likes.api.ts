@@ -3,7 +3,7 @@ import { LikeResponse } from "@/types/like/like";
 
 const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5173";
 
-export const LikePost = async (postId: number): Promise<LikeResponse> => {
+export const Like = async (postId: number): Promise<LikeResponse> => {
     try {
         const { data } = await motreeAxios.post<LikeResponse>(`${SERVER_URL}/api/like/${postId}`);
         return data;

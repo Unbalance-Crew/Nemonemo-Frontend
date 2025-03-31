@@ -1,4 +1,4 @@
-export interface getPostsResponse {
+export interface PostsResponse {
     id: number;
     title: string;
     content: string;

@@ -48,11 +48,3 @@ export const MenuItem = styled.li`
         transition: 0.4s;
     }
 `
-
-export const UserInfo = styled.div`
-
-`
-
-export const Username = styled.div`
-
-`

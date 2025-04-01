@@ -1,7 +1,7 @@
 import { motreeAxios } from "@/libs/axios/axios";
 import { SearchResponse } from "@/types/search/search";
 
-const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5173";
+const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5176";
 
 export const search = async (requestDto: { keyword: string; page: number; size: number }): Promise<SearchResponse> => {
     try {

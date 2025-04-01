@@ -1,7 +1,7 @@
 import { motreeAxios } from "@/libs/axios/axios";
 import { FollowUnFollowResponse, FollowListResponse, FollowCountResponse } from "@/types/follow/follow";
 
-const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5173";
+const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5176";
 
 export const follow = async (followingId: number): Promise<FollowUnFollowResponse> => {
     try {

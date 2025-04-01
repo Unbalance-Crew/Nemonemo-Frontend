@@ -1,7 +1,7 @@
 import { motreeAxios } from "@/libs/axios/axios";
 import { createCommentResponse, CommentResponse, createCommentRequest } from "@/types/comments/comments";
 
-const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5173";
+const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5176";
 
 export const createComment = async (postId: number, requestDto: createCommentRequest): Promise<createCommentResponse> => {
     try {

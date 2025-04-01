@@ -8,3 +8,12 @@ export interface PostsResponse {
     likeCount: number;
     commentCount: number;
 };
+
+export interface AllPostsResponse {
+    content: {        
+    }[];
+    totalElements: number;
+    currentPage: number;
+    pageSize: number;
+    totalPage: number;
+};

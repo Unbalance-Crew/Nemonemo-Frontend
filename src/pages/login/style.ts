@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    border: 2px solid #E3E3E3;
     width: 26rem;
     height: 30rem;
+    border: 2px solid #E3E3E3;
     border-radius: 3rem;
     position: absolute;
     top: 50%;
@@ -19,9 +19,9 @@ export const LogoContainer = styled.div`
 `
 
 export const LoginForm = styled.div`
+    width: 22rem;
     display: flex;
     flex-direction: column;
-    width: 22rem;
     gap: 1rem;
 `
 
@@ -54,10 +54,10 @@ export const LoginInput = styled.input`
 `
 
 export const ButtonContainer = styled.div`
+    width: 24.3rem;
     display: flex;
     justify-content: center;
     margin-top: 0.5rem;
-    width: 24.3rem;
 `
 
 export const LoginButton = styled.button`

@@ -9,3 +9,8 @@ export interface getFollowListResponse {
     username: string;
     name: string;
 };
+
+export interface FollowCountResponse {
+    followingCount: number;
+    followerCount: number;
+}

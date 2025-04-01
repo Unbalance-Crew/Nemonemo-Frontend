@@ -8,6 +8,6 @@ export const Like = async (postId: number): Promise<LikeResponse> => {
         const { data } = await motreeAxios.post<LikeResponse>(`${SERVER_URL}/api/like/${postId}`);
         return data;
     } catch (error) {
-        throw new Error("좋아요 요청 실패");
+        throw new Error("좋아요 토글 요청 실패");
     };
 };

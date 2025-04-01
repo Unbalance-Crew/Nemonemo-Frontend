@@ -1,5 +1,5 @@
 import { motreeAxios } from "@/libs/axios/axios";
-import { FollowUnFollowResponse, getFollowListResponse } from "@/types/follow/follow";
+import { FollowUnFollowResponse, getFollowListResponse, FollowCountResponse} from "@/types/follow/follow";
 
 const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5173";
 
@@ -45,5 +45,23 @@ export const getMyFollowersList = async (): Promise<getFollowListResponse[]> => 
         return data;
     } catch (error) {
         throw new Error("내 팔로워 목록 요청 실패");
+    };
+};
+
+export const getMyFollowCount = async (): Promise<FollowCountResponse> => {
+    try {
+        const { data } = await motreeAxios.get<FollowCountResponse>(`${SERVER_URL}/api/follows/my/count`);
+        return data;
+    } catch (error) {
+        throw new Error("내 팔로우 카운트 요청 실패");
+    };
+};
+
+export const getFollowCount = async (id: number): Promise<FollowCountResponse> => {
+    try {
+        const { data } = await motreeAxios.get<FollowCountResponse>(`${SERVER_URL}/api/follows/${id}/count`);
+        return data;
+    } catch (error) {
+        throw new Error("특정 사용자 팔로우 카운트 요청 실패");
     };
 };

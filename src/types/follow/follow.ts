@@ -4,13 +4,19 @@ export interface FollowUnFollowResponse {
     followed: boolean;
 };
 
-export interface getFollowListResponse {
-    id: number;
-    username: string;
-    name: string;
+export interface FollowListResponse {
+    content: {
+        username: string;
+        profileImage: string;
+        id: number;
+    }[];
+    totalElements: number;
+    currentPage: number;
+    pageSize: number;
+    totalPage: number;
 };
 
 export interface FollowCountResponse {
-    followingCount: number;
     followerCount: number;
-}
+    followingCount: number;
+};

@@ -1,7 +1,7 @@
 import { motreeAxios } from "@/libs/axios/axios";
 import { PostsResponse, AllPostsResponse } from "@/types/posts/posts";
 
-const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5173";
+const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5176";
 
 export const getPosts = async (postId: number): Promise<PostsResponse> => {
     try {

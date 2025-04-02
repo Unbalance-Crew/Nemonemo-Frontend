@@ -1,7 +1,7 @@
 import { motreeAxios } from "@/libs/axios/axios";
 import { Login, Register, AuthResponse, NewAccessToken } from "@/types/auth/auth";
 
-const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5175";
+const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5177";
 
 export const login = async (loginData: Login): Promise<AuthResponse> => {
     try {

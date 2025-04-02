@@ -48,3 +48,7 @@ export const MenuItem = styled.li`
         transition: 0.4s;
     }
 `
+
+export const ProfileWrapper = styled.div`
+
+`

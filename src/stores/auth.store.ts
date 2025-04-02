@@ -8,21 +8,20 @@ interface AuthState {
     checkAuthStatus: () => void;
     logout: () => void;
     uploadProfileImage: (file: File) => Promise<void>;
-}
+};
 
 const useAuthStore = create<AuthState>((set) => ({
     isAuthenticated: false,
     userInfo: null,
     checkAuthStatus: async () => {
-        const isAuth = isAuthenticated();
-        if (isAuth) {
-            try {
-                const { username, profileImagePath } = await getMyInfo();
-                set({ isAuthenticated: true, userInfo: { profileImage: profileImagePath || '' } });
-            } catch (error) {
-                set({ isAuthenticated: false, userInfo: null });
-            }
-        } else {
+        if (!isAuthenticated()) {
+            set({ isAuthenticated: false, userInfo: null });
+            return;
+        }
+        try {
+            const { profileImagePath } = await getMyInfo();
+            set({ isAuthenticated: true, userInfo: { profileImage: profileImagePath || '' } });
+        } catch (error) {
             set({ isAuthenticated: false, userInfo: null });
         }
     },

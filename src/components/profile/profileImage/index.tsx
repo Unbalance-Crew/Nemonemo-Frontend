@@ -6,7 +6,7 @@ interface ProfileImageProps {
     onClick?: () => void;
 }
 
-const ProfileImage = ({ src, size, onClick}: ProfileImageProps) => {
+const ProfileImage = ({ src, size, onClick }: ProfileImageProps) => {
     return (
         <S.Container size={size}>
             <img src={src} alt="프로필 이미지" />

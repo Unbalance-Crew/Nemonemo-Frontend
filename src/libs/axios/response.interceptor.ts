@@ -67,7 +67,7 @@ export const responseInterceptor = async (error: AxiosError) => {
           resolve(motreeAxios(originalRequest!));
         });
       });
-    }
-  }
+    };
+  };
   return Promise.reject(error);
 };

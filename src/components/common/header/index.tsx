@@ -36,6 +36,7 @@ const Header = () => {
                         <S.MenuItem onClick={() => navigate('/create')}>게시물 생성</S.MenuItem>
                     </S.Menu>
                 </S.MenuWrap>
+                <S.ProfileWrapper>
                     {isAuthenticated ? (
                         <div>
                             <ProfileImage
@@ -43,11 +44,12 @@ const Header = () => {
                                 size={40}
                                 onClick={handleProfileClick}
                             />
-                            <S.MenuItem onClick={handleLogout}>로그아웃</S.MenuItem> 
+                            <S.MenuItem onClick={handleLogout}>로그아웃</S.MenuItem>
                         </div>
                     ) : (
                         <S.MenuItem onClick={() => navigate('/login')}>로그인</S.MenuItem>
                     )}
+                </S.ProfileWrapper>
             </S.HeaderWrap>
         </S.Container>
     );

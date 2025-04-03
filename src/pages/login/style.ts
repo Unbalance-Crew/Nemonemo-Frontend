@@ -15,7 +15,7 @@ export const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 3.3rem;
 `
 
 export const LoginForm = styled.div`
@@ -29,7 +29,7 @@ export const InputGroup = styled.div`
     width: 22rem;
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.5rem;
 `
 
 export const InputTitle = styled.label`

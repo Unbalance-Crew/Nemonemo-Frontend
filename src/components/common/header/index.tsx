@@ -1,7 +1,6 @@
 import * as S from './style';
 import Logo from '@/assets/logo.svg';
 import { useNavigate } from 'react-router-dom';
-import ProfileImage from '@/components/profile/profileImage';
 
 const Header = () => {
     const navigate = useNavigate();

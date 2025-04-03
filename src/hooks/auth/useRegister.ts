@@ -9,9 +9,7 @@ const isValidateUserName = (username: string) => {
 };
 
 const isValidatePassword = (password: string) => {
-  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-    password
-  );
+  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
 };
 
 const useRegister = () => {
@@ -39,16 +37,18 @@ const useRegister = () => {
       return;
     }
 
+    if (name.length < 2) {
+      Toast("이름은 2자 이상이어야 합니다!", "ERROR");
+      return;
+    }
+
     if (!isValidateUserName(username)) {
       Toast("아이디는 4자 이상 12자 이하여야 합니다!", "ERROR");
       return;
     }
 
     if (!isValidatePassword(password)) {
-      Toast(
-        "error",
-        "비밀번호는 8자 이상, 숫자, 문자, 특수문자를 포함해야합니다!"
-      );
+      Toast("비밀번호는 8자 이상, 문자, 숫자, 특수문자를 포함해야 합니다!", "ERROR");
       return;
     }
 
@@ -58,9 +58,10 @@ const useRegister = () => {
       Toast("회원가입에 성공했습니다!", "SUCCESS");
 
       navigate("/login");
-    } catch (error) {
+
+    } catch (error: any) {
       Toast("회원가입에 실패했습니다!", "ERROR");
-    }
+    };
   };
 
   return {

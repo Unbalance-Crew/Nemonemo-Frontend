@@ -4,17 +4,17 @@ import { Token } from "@/libs/token/token";
 import { requestInterceptor } from '@/libs/axios/request.interceptor';
 import { responseInterceptor } from "./response.interceptor";
 
-const SERVER_URL = process.env.VITE_SERVER_URL || "http://localhost:5173";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5177";
 
-const createCustomAxiosInstance = (baseUrl?: AxiosRequestConfig) => {
-    const basecConfig: AxiosRequestConfig = {
+const createCustomAxiosInstance = (config?: AxiosRequestConfig) => {
+    const baseConfig: AxiosRequestConfig = {
         headers: {
             "Access-Control-Allow-Origin": "*",
         },
     };
     return axios.create({
-        ...basecConfig,
-        ...baseUrl,
+        ...baseConfig,
+        ...config,
         withCredentials: true,
     });
 };

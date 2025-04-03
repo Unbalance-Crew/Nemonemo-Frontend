@@ -1,7 +1,7 @@
 import { motreeAxios } from "@/libs/axios/axios";
 import { LikeResponse } from "@/types/like/like";
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5177";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 
 export const Like = async (postId: number): Promise<LikeResponse> => {
     try {

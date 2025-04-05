@@ -26,5 +26,5 @@ export const motreeAxios = createCustomAxiosInstance({
     },
 });
 
-motreeAxios.interceptors.request.use((res) => res, requestInterceptor);
-motreeAxios.interceptors.response.use((res) => res, responseInterceptor);
+motreeAxios.interceptors.request.use(requestInterceptor, (error) => Promise.reject(error));
+motreeAxios.interceptors.response.use((response) => response, responseInterceptor);

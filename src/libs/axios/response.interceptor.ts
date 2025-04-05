@@ -12,7 +12,8 @@ let isRefreshing = false;
 let refreshSubscribers: ((accessToken: string) => void)[] = [];
 
 const onTokenRefreshed = (accessToken: string) => {
-  refreshSubscribers.map((callback) => callback(accessToken));
+  refreshSubscribers.forEach((callback) => callback(accessToken));
+  refreshSubscribers = [];
 };
 
 const addRefreshSubscriber = (callback: (accessToken: string) => void) => {
@@ -48,7 +49,7 @@ export const responseInterceptor = async (error: AxiosError) => {
 
           motreeAxios.defaults.headers.common[
             REQUEST_TOKEN
-          ] = `Bearer ${newAccessToken}`;
+          ] = `Bearer ${newAccessToken.accessToken}`;
 
           Token.setToken(ACCESS_TOKEN, newAccessToken.accessToken);
 

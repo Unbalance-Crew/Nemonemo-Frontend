@@ -4,7 +4,7 @@ import { Token } from "@/libs/token/token";
 import { requestInterceptor } from '@/libs/axios/request.interceptor';
 import { responseInterceptor } from "./response.interceptor";
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5177";
+const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 
 const createCustomAxiosInstance = (config?: AxiosRequestConfig) => {
     const baseConfig: AxiosRequestConfig = {

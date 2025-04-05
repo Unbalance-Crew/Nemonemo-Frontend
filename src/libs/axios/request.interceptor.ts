@@ -12,7 +12,7 @@ export const requestInterceptor = (
     if (Token.getToken(REFRESH_TOKEN) === null) {
         window.location.href = "/login";
     } else {
-        config.headers[REQUEST_TOKEN] = `Bearer ${ACCESS_TOKEN}`;
+        config.headers[REQUEST_TOKEN] = `Bearer ${Token.getToken(ACCESS_TOKEN)}`;
     }
     return config;
 };

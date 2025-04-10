@@ -4,7 +4,7 @@ import SearchBar from '@/components/common/searchbar';
 const Search = () => {
     return (
         <S.Container>
-                <SearchBar />
+            <SearchBar />
         </S.Container>
     );
 };

@@ -7,8 +7,8 @@ const queryClient = new QueryClient();
 const Provider = () => {
     return (
         <QueryClientProvider client={ queryClient }>
-                <Router />
-                <ToastContainer />
+            <Router />
+            <ToastContainer />
         </QueryClientProvider>
     );
 };

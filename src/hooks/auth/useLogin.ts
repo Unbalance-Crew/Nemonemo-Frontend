@@ -25,6 +25,8 @@ const useLogin = () => {
   const handleLogin = async () => {
     const { username, password } = loginData;
 
+    console.log("[handleLogin] 입력된 데이터:", loginData);
+
     if (!username || !password) {
       Toast("모든 항목을 입력해주세요!", "ERROR");
       return;
@@ -36,6 +38,8 @@ const useLogin = () => {
 
       Token.setToken(ACCESS_TOKEN, response.accessToken);
       Token.setToken(REFRESH_TOKEN, response.refreshToken);
+
+      console.log("[handleLogin] 토큰 저장 완료");
 
       Toast("로그인에 성공했습니다!", "SUCCESS");
 

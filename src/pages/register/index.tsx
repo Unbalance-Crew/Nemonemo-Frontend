@@ -2,6 +2,8 @@ import * as S from './style';
 import Logo from '@/assets/logo.svg';
 import { useNavigate } from 'react-router-dom';
 import useRegister from '@/hooks/auth/useRegister';
+import { useEffect } from 'react';
+import Toast from '@/libs/toast/toast';
 
 const Register = () => {
     const navigate = useNavigate();
@@ -10,6 +12,10 @@ const Register = () => {
     const handleLinkLogin = () => {
         navigate('/login');
     };
+
+    useEffect(() => {
+        Toast("토스트 확인", "SUCCESS");
+    },[]);
 
     return (
         <S.Container>

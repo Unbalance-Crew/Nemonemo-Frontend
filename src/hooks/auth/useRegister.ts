@@ -4,11 +4,11 @@ import { Register } from "@/types/auth/auth";
 import { register } from "@/apis/auth/auth.api";
 import Toast from "@/libs/toast/toast";
 
-const isValidateUserName = (username: string) => {
+const isValidateUserName = ( username: string ) => {
   return /^[a-zA-Z0-9]{4,12}$/.test(username);
 };
 
-const isValidatePassword = (password: string) => {
+const isValidatePassword = ( password: string ) => {
   return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
 };
 

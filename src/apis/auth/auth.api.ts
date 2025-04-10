@@ -3,9 +3,12 @@ import { Login, Register, AuthResponse, NewAccessToken } from "@/types/auth/auth
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 
+console.log("SERVER_URL:", SERVER_URL);
+
 export const login = async (loginData: Login): Promise<AuthResponse> => {
     try {
         const { data } = await axios.post<AuthResponse>(`${SERVER_URL}/api/auth/login`, loginData);
+        console.log("보내는 데이터:", loginData);
         return data;
     } catch (error) {
         throw new Error("로그인 요청 실패");

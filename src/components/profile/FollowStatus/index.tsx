@@ -1,6 +1,6 @@
 import * as S from './style';
 
-const ProfileBox = () => {
+const FollowStatus = () => {
     return (
         <S.Container>
             <div></div>
@@ -8,4 +8,4 @@ const ProfileBox = () => {
     );
 };
 
-export default ProfileBox;
+export default FollowStatus;

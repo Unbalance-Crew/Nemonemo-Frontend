@@ -43,12 +43,25 @@ export const MenuItem = styled.li`
     padding: 5px 10px;
     font-weight: 400;
     border-radius: 10px;
+
     &:hover {
         background-color: #E0E0E0;
         transition: 0.4s;
     }
 `
 
-export const ProfileWrapper = styled.div`
+export const LogoutButton = styled.button`
+    font-size: 15px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: 400;
+    border-radius: 10px;
+    color: #E83F25;
+    border: none;
+    background-color: transparent;
 
+    &:hover {
+        background-color: #E0E0E0;
+        transition: 0.4s;
+    }
 `

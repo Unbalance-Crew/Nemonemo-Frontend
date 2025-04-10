@@ -1,5 +1,5 @@
-import styeld from 'styled-components';
+import styled from 'styled-components';
 
-export const Container = styeld.div`
+export const Container = styled.div`
 
 `

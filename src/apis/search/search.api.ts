@@ -10,6 +10,6 @@ export const search = async (requestDto: { keyword: string; page: number; size: 
         });
         return data;
     } catch (error) {
-        throw new Error("검색 요청 실패");
+        throw new Error("포스트 검색 요청 실패");
     };
 };

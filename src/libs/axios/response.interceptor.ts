@@ -8,8 +8,6 @@ import {
 import { refresh } from "@/apis/auth/auth.api";
 import { motreeAxios } from "@/libs/axios/axios";
 
-console.log("📩 responseInterceptor 실행됨");
-
 let isRefreshing = false;
 let refreshSubscribers: ((accessToken: string) => void)[] = [];
 

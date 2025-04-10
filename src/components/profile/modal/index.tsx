@@ -1,6 +1,6 @@
 import * as S from './style';
 
-const FriendListModal = () => {
+const Modal = () => {
     return (
         <S.Container>
             <div></div>
@@ -8,4 +8,4 @@ const FriendListModal = () => {
     );
 };
 
-export default FriendListModal;
+export default Modal;

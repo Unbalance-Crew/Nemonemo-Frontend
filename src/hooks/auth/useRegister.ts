@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { Register } from "@/types/auth/auth";
 import { register } from "@/apis/auth/auth.api";
@@ -53,13 +53,12 @@ const useRegister = () => {
     }
 
     try {
-      await register(registerData);
-
+      const response = await register(registerData);
+      console.log("회원가입 성공");
       Toast("회원가입에 성공했습니다!", "SUCCESS");
-
       navigate("/login");
-
-    } catch (error: any) {
+    } catch (error) {
+      console.error("회원가입 실패", error);
       Toast("회원가입에 실패했습니다!", "ERROR");
     };
   };

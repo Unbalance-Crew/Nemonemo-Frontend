@@ -32,6 +32,7 @@ const useLogin = () => {
 
     try {
       const response = await login(loginData);
+      console.log("로그인 성공");
 
       Token.setToken(ACCESS_TOKEN, response.accessToken);
       Token.setToken(REFRESH_TOKEN, response.refreshToken);
@@ -41,7 +42,8 @@ const useLogin = () => {
       navigate("/");
     } catch (error) {
       Toast("로그인에 실패했습니다!", "ERROR");
-    }
+      console.error("로그인 실패", error);
+    };
   };
   return {
     loginData,

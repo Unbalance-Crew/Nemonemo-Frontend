@@ -1,6 +1,6 @@
 import * as S from './style';
 
-const Modal = () => {
+const ProfileHeader = () => {
     return (
         <S.Container>
             <div></div>
@@ -8,4 +8,4 @@ const Modal = () => {
     );
 };
 
-export default Modal;
+export default ProfileHeader;

@@ -2,13 +2,13 @@ import { BrowserRouter, Route, Routes, Navigate, Outlet } from 'react-router-dom
 import { isAuthenticated } from '@/utils/auth';
 
 import Layout from '@/layouts';
-import Home from '@/pages/home';
-import Login from '@/pages/login';
-import Register from '@/pages/register';
-import Search from '@/pages/search';
-import Create from '@/pages/create';
-import Profile from '@/pages/profile';
-import NotFound from '@/pages/notfound';
+import Home from '@/pages/Home';
+import Login from '@/pages/LogIn';
+import Register from '@/pages/Register';
+import Search from '@/pages/Search';
+import Create from '@/pages/Create';
+import Profile from '@/pages/MyProfile';
+import NotFound from '@/pages/Notfound';
 
 const RequireAuth = () => {
     return isAuthenticated() ? <Outlet /> : <Navigate to="/login" replace />;

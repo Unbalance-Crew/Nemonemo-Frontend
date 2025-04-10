@@ -1,5 +1,6 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import PrivateRoute from './privateRoute';
+import { BrowserRouter, Route, Routes, Navigate, Outlet } from 'react-router-dom';
+import { isAuthenticated } from '@/utils/auth';
+
 import Layout from '@/layouts';
 import Home from '@/pages/home';
 import Login from '@/pages/login';
@@ -9,6 +10,10 @@ import Create from '@/pages/create';
 import Profile from '@/pages/profile';
 import NotFound from '@/pages/notfound';
 
+const RequireAuth = () => {
+    return isAuthenticated() ? <Outlet /> : <Navigate to="/login" replace />;
+};
+
 const Router = () => {
     return (
         <BrowserRouter>
@@ -16,12 +21,12 @@ const Router = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
 
-                <Route element={<PrivateRoute />}>
+                <Route element={<RequireAuth />}>
                     <Route element={<Layout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="/search" element={<Search />} />
                         <Route path="/create" element={<Create />} />
-                        <Route path="/profile/:username" element={<Profile />} />
+                        <Route path="/profile" element={<Profile />} />
                     </Route>
                 </Route>
 

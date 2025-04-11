@@ -3,7 +3,7 @@ import { FollowUnFollowResponse, FollowListResponse, FollowCountResponse } from 
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 
-export const follow = async (followingId: number): Promise<FollowUnFollowResponse> => {
+export const followToggle = async (followingId: number): Promise<FollowUnFollowResponse> => {
     try {
         const { data } = await axios.post<FollowUnFollowResponse>(`${SERVER_URL}/api/follows/${followingId}`);
         return data;
@@ -12,56 +12,12 @@ export const follow = async (followingId: number): Promise<FollowUnFollowRespons
     };
 };
 
-export const getFollowList = async (username: string, pageRequestDto: { page: number; size: number }): Promise<FollowListResponse> => {
-    try {
-        const { data } = await axios.get<FollowListResponse>(`${SERVER_URL}/api/follows/${username}/following`,{
-            params: pageRequestDto,
-        });
-        return data;
-    } catch (error) {
-        throw new Error("특정 사용자 팔로우 리스트 요청 실패");
-    };
-};
-
-export const getFollowerList = async (username: string, pageRequestDto: { page: number; size: number }): Promise<FollowListResponse> => {
-    try {
-        const { data } = await axios.get<FollowListResponse>(`${SERVER_URL}/api/follows/${username}/followers`,{
-            params: pageRequestDto,
-        });
-        return data;
-    } catch (error) {
-        throw new Error("특정 사용자 팔로워 리스트 요청 실패");
-    };
-};
-
 export const getFollowCount = async (username: string): Promise<FollowCountResponse> => {
     try {
         const { data } = await axios.get<FollowCountResponse>(`${SERVER_URL}/api/follows/${username}/count`);
         return data;
     } catch (error) {
-        throw new Error("특정 사용자 팔로우 카운트 요청 실패");
-    };
-};
-
-export const getMyFollowingList = async (pageReauestDto: { page: number; size: number }): Promise<FollowListResponse> => {
-    try {
-        const { data } = await axios.get<FollowListResponse>(`${SERVER_URL}/api/follows/me/following`,{
-            params: pageReauestDto,
-        });
-        return data;
-    } catch (error) {
-        throw new Error("내 팔로우 리스트 요청 실패");
-    };
-};
-
-export const getMyFollowerList = async (pageReauestDto: { page: number; size: number }): Promise<FollowListResponse> => {
-    try {
-        const { data } = await axios.get<FollowListResponse>(`${SERVER_URL}/api/follows/me/followers`,{
-            params: pageReauestDto,
-        });
-        return data;
-    } catch (error) {
-        throw new Error("내 팔로워 리스트 요청 실패");
+        throw new Error("특정 사용자 팔로잉 팔로워 카운트 요청 실패");
     };
 };
 
@@ -70,6 +26,6 @@ export const getMyFollowCount = async (): Promise<FollowCountResponse> => {
         const { data } = await axios.get<FollowCountResponse>(`${SERVER_URL}/api/follows/me/count`);
         return data;
     } catch (error) {
-        throw new Error("내 팔로우 카운트 요청 실패");
+        throw new Error("내 팔로잉 팔로워 카운트 요청 실패");
     };
 };

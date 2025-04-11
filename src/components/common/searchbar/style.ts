@@ -6,14 +6,14 @@ export const Container = styled.div`
     @media (max-width: 768px) {
         margin-top: 2rem;
     }
-`;
+`
 
 export const Text = styled.div`
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 400;
     margin-bottom: 0.5rem;
     margin-left: 0.2rem;
-    width: 13rem;
+    width: 14.5rem;
     padding: 0.3rem;
     background-color: #FFDD61;
     border-radius: 10px;
@@ -29,7 +29,7 @@ export const SearchBarContainer = styled.div`
     @media (max-width: 768px) {
         margin-top: 3rem;
     }
-`;
+`
 
 export const InputContainer = styled.div`
     width: 100%;
@@ -37,7 +37,7 @@ export const InputContainer = styled.div`
     
     input {
         width: 30rem;
-        height: 2.5rem;
+        height: 2.7rem;
         border: 2px solid #E3E3E3;
         background-color: #F2F2F2;
         padding-left: 0.7rem;
@@ -55,4 +55,4 @@ export const InputContainer = styled.div`
             height: 2rem;
         }
     }
-`;
+`

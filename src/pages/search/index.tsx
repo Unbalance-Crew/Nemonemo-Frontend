@@ -1,12 +1,12 @@
-import * as S from './style';
-import SearchBar from '@/components/common/searchbar';
+import * as S from "./style";
+import SearchBar from "@/components/Common/SearchBar";
 
 const Search = () => {
-    return (
-        <S.Container>
-            <SearchBar />
-        </S.Container>
-    );
+  return (
+    <S.Container>
+      <SearchBar />
+    </S.Container>
+  );
 };
 
 export default Search;

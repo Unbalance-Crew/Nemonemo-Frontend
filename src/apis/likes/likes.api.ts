@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LikeResponse } from "@/types/like/like";
+import { LikeResponse } from "@/types/Like/like";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 

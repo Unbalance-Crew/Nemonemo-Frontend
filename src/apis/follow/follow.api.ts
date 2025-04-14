@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FollowUnFollowResponse, FollowListResponse, FollowCountResponse } from "@/types/follow/follow";
+import { FollowUnFollowResponse, FollowListResponse, FollowCountResponse } from "@/types/Follow/follow";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { PostsResponse, AllPostsResponse } from "@/types/posts/posts";
+import { PostsResponse, AllPostsResponse } from "@/types/Posts/posts";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 

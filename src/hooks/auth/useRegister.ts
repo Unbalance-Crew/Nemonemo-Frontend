@@ -1,15 +1,17 @@
 import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { Register } from "@/types/auth/auth";
+import { Register } from "@/types/Auth/auth";
 import { register } from "@/apis/auth/auth.api";
-import Toast from "@/libs/toast/toast";
+import Toast from "@/libs/Toast/toast";
 
-const isValidateUserName = ( username: string ) => {
+const isValidateUserName = (username: string) => {
   return /^[a-zA-Z0-9]{4,12}$/.test(username);
 };
 
-const isValidatePassword = ( password: string ) => {
-  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password);
+const isValidatePassword = (password: string) => {
+  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+    password
+  );
 };
 
 const useRegister = () => {
@@ -48,7 +50,10 @@ const useRegister = () => {
     }
 
     if (!isValidatePassword(password)) {
-      Toast("비밀번호는 8자 이상, 문자, 숫자, 특수문자를 포함해야 합니다!", "ERROR");
+      Toast(
+        "비밀번호는 8자 이상, 문자, 숫자, 특수문자를 포함해야 합니다!",
+        "ERROR"
+      );
       return;
     }
 
@@ -60,7 +65,7 @@ const useRegister = () => {
     } catch (error) {
       console.error("회원가입 실패", error);
       Toast("회원가입에 실패했습니다!", "ERROR");
-    };
+    }
   };
 
   return {

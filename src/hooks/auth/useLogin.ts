@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "@/constants/token/token.constants";
-import { Login } from "@/types/auth/auth";
+import { Login } from "@/types/Auth/auth";
 import { login } from "@/apis/auth/auth.api";
-import { Token } from "@/libs/token/token";
-import Toast from "@/libs/toast/toast";
+import { Token } from "@/libs/Token/token";
+import Toast from "@/libs/Toast/toast";
 
 const useLogin = () => {
   const navigate = useNavigate();
@@ -47,7 +47,7 @@ const useLogin = () => {
     } catch (error) {
       Toast("로그인에 실패했습니다!", "ERROR");
       console.error("로그인 실패", error);
-    };
+    }
   };
   return {
     loginData,

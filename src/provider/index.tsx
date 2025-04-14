@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
-import Router from "@/components/router";
+import Router from "@/components/Router";
 
 const queryClient = new QueryClient();
 

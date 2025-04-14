@@ -1,5 +1,5 @@
 import axios from "axios";
-import { SearchResponse } from "@/types/search/search";
+import { SearchResponse } from "@/types/Search/search";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 

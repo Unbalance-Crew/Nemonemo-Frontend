@@ -1,12 +1,12 @@
 import { AxiosError } from "axios";
-import { Token } from "@/libs/token/token";
+import { Token } from "@/libs/Token/token";
 import {
   ACCESS_TOKEN,
   REFRESH_TOKEN,
   REQUEST_TOKEN,
 } from "@/constants/token/token.constants";
 import { refresh } from "@/apis/auth/auth.api";
-import { motreeAxios } from "@/libs/axios/axios";
+import { motreeAxios } from "@/libs/Axios/axios";
 
 let isRefreshing = false;
 let refreshSubscribers: ((accessToken: string) => void)[] = [];
@@ -68,7 +68,7 @@ export const responseInterceptor = async (error: AxiosError) => {
           resolve(motreeAxios(originalRequest!));
         });
       });
-    };
-  };
+    }
+  }
   return Promise.reject(error);
 };

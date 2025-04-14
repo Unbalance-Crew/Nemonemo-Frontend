@@ -1,5 +1,5 @@
 import axios from "axios";
-import { createCommentResponse, CommentResponse, createCommentRequest } from "@/types/comments/comments";
+import { createCommentResponse, CommentResponse, createCommentRequest } from "@/types/Comments/comments";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 

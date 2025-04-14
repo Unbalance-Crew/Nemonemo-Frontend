@@ -1,12 +1,12 @@
-import * as S from './style';
-import Banner from '@/components/common/banner';
+import * as S from "./style";
+import Banner from "@/components/Common/Banner";
 
 const Home = () => {
-    return (
-        <S.Container>
-            <Banner />
-        </S.Container>
-    );
+  return (
+    <S.Container>
+      <Banner />
+    </S.Container>
+  );
 };
 
 export default Home;

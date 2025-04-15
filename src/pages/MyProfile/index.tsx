@@ -1,11 +1,14 @@
+import InfoBox from '@/components/Profile/InfoBox';
 import * as S from './style';
 
-const Profile = () => {
+const myProfile = () => {
     return (
         <S.Container>
-            <div></div>
+            <S.Content>
+                <InfoBox />
+            </S.Content>
         </S.Container>
     );
 };
 
-export default Profile;
+export default myProfile;

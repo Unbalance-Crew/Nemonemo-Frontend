@@ -11,7 +11,7 @@ export const useMyInfo = () => {
                 const response = await getMyInfo();
                 setData(response);
             } catch (err) {
-                console.error("내 정보 불러오기 실패");
+                console.error("내 정보 조회 요청 실패", err);
             }
         };
         fetchData();

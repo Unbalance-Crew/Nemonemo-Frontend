@@ -7,12 +7,12 @@ import Login from '@/pages/LogIn';
 import Register from '@/pages/Register';
 import Search from '@/pages/Search';
 import Create from '@/pages/Create';
-import Profile from '@/pages/MyProfile';
+import MyProfile from '@/pages/MyProfile';
 import UserProfile from '@/pages/UserProfile';
 import NotFound from '@/pages/Notfound';
 
 const RequireAuth = () => {
-    return isAuthenticated() ? <Outlet /> : <Navigate to="/login" replace />;
+    return isAuthenticated() ? <Outlet /> : <Navigate to="/login" replace />
 };
 
 const Router = () => {
@@ -27,7 +27,7 @@ const Router = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/search" element={<Search />} />
                         <Route path="/create" element={<Create />} />
-                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/profile" element={<MyProfile />} />
                         <Route path="/profile/:username" element={<UserProfile />} />
                     </Route>
                 </Route>

@@ -1,13 +1,16 @@
 import ProfileImage from '@/assets/profile.svg';
-import { ProfileProps } from '@/types/Profile/profile';
 import * as S from './style';
+import { useMyInfo } from '@/hooks/Member/useMyInfo';
 
-const InfoBox = ({ name, username }: ProfileProps) => {
+const InfoBox = () => {
+    const { data } = useMyInfo();
+
+    if (!data) return null;
+
     return (
         <S.Container>
             <S.ProfileImage src={ProfileImage} alt="Profile" />
-            <S.Name>{ name }</S.Name>
-            <S.Username>{ username }</S.Username>
+            <S.Username>{data.username}</S.Username>
         </S.Container>
     );
 };

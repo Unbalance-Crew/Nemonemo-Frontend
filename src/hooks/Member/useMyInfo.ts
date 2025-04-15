@@ -3,7 +3,7 @@ import { getMyInfo } from "@/apis/member/member.api";
 import { getInfoResponse } from "@/types/Member/member";
 
 export const useMyInfo = () => {
-    const [ data, setData ] = useState<getInfoResponse | null>(null);
+    const [ data, setData] = useState<getInfoResponse | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {

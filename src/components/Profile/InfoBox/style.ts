@@ -7,7 +7,7 @@ export const Container = Styled.div`
     display: flex;
     align-items: center;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #dcdcdc; // 조금 더 눈에 띄는 회색
+    border-bottom: 1px solid #dcdcdc;
 `
 
 export const Username = Styled.div`

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import ProfileImage from '@/assets/profile.svg';
 import * as S from './style';
 
 const InfoBox = () => {
@@ -11,6 +12,7 @@ const InfoBox = () => {
     }, []);
     return (
         <S.Container>
+            <img src={ ProfileImage } alt='프로필 이미지' />
             <S.Username>{ username }</S.Username>
         </S.Container>
     );

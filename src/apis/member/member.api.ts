@@ -5,7 +5,7 @@ const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 
 export const getMyInfo = async (): Promise<getInfoResponse> => {
     try {
-        const { data } = await axios.get<getInfoResponse>(`${SERVER_URL}/api/members/me`);
+        const { data } = await axios.get<getInfoResponse>(`${SERVER_URL}/api/members/me`); 
         return data;
     } catch (error) {
         throw new Error("내 정보 조회 요청 실패");

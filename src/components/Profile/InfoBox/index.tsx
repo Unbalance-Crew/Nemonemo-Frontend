@@ -1,22 +1,17 @@
-import { useEffect } from 'react';
-import ProfileImage from '@/assets/profile.svg';
+import { useEffect, useState } from 'react';
 import * as S from './style';
-import { useMyInfo } from '@/hooks/Member/useMyInfo';
 
 const InfoBox = () => {
-    const { data } = useMyInfo();
+    const [username, setUsername] = useState<string | null>(null);
 
-    if (!data) {
-        useEffect(() => {
-            console.error("내 정보 없음");
-        }, []);
-        return null;
-    };
-
+    useEffect(() => {
+        const storedUsername = sessionStorage.getItem('username');
+        setUsername(storedUsername);
+        console.log('세션에서 가져온 username:', storedUsername);
+    }, []);
     return (
         <S.Container>
-            <S.ProfileImage src={ ProfileImage } alt="Profile" />
-            <S.Username>{ data.username }</S.Username>
+            <S.Username>{ username }</S.Username>
         </S.Container>
     );
 };

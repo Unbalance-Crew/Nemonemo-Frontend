@@ -41,6 +41,16 @@ const useLogin = () => {
 
       console.log("[handleLogin] 토큰 저장 완료");
 
+      sessionStorage.setItem("username", username);
+
+      const storedUsername = sessionStorage.getItem("username");
+      if (storedUsername === username) {
+        console.log("로그인 성공, 세션에 저장됨:", storedUsername);
+      } else {
+        console.log("세션 저장 실패");
+        console.error("세션 저장 실패");
+      };
+
       Toast("로그인에 성공했습니다!", "SUCCESS");
 
       navigate("/");

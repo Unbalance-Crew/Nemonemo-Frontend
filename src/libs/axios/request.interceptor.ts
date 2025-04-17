@@ -3,7 +3,6 @@ import { Token } from "@/libs/Token/token";
 import {
   ACCESS_TOKEN,
   REFRESH_TOKEN,
-  REQUEST_TOKEN,
 } from "@/constants/token/token.constants";
 
 export const requestInterceptor = async (
@@ -13,7 +12,7 @@ export const requestInterceptor = async (
   const refreshToken = Token.getToken(REFRESH_TOKEN);
 
   if (accessToken && refreshToken) {
-    config.headers[REQUEST_TOKEN] = `Bearer ${accessToken}`;
+    config.headers.Authorization = `Bearer ${accessToken}`;
   } else {
     console.log("토큰이 존재하지 않습니다!");
   }

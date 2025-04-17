@@ -1,10 +1,6 @@
 import { AxiosError } from "axios";
 import { Token } from "@/libs/Token/token";
-import {
-  ACCESS_TOKEN,
-  REFRESH_TOKEN,
-  REQUEST_TOKEN,
-} from "@/constants/token/token.constants";
+import { ACCESS_TOKEN, REFRESH_TOKEN, REQUEST_TOKEN } from "@/constants/token/token.constants";
 import { refresh } from "@/apis/auth/auth.api";
 import { motreeAxios } from "@/libs/Axios/axios";
 
@@ -62,9 +58,14 @@ export const responseInterceptor = async (error: AxiosError) => {
           window.location.href = "/sign";
         }
       }
+
       return new Promise((resolve) => {
         addRefreshSubscriber((accessToken: string) => {
-          originalRequest!.headers![REQUEST_TOKEN] = `Bearer ${accessToken}`;
+          if (originalRequest?.headers) {
+            originalRequest.headers[
+              REQUEST_TOKEN
+            ] = `Bearer ${accessToken}`;
+          }
           resolve(motreeAxios(originalRequest!));
         });
       });

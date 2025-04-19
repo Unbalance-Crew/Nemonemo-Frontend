@@ -36,7 +36,7 @@ export const InputContainer = styled.div`
     height: 100%;
     
     input {
-        width: 30rem;
+        width: 40rem;
         height: 2.7rem;
         border: 2px solid #E3E3E3;
         background-color: #F2F2F2;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 100%;
     height: 5rem;
-    margin-top: 9rem;
+    margin-top: 12rem;
 `
 
 export const BannerContainer = styled.div`

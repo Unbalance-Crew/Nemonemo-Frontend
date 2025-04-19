@@ -20,7 +20,7 @@ export const HeaderWrap = styled.div`
 
 export const Logo = styled.div`
     cursor: pointer;
-    margin-left: 2.4rem;
+    margin-left: 3rem;
 `
 
 export const MenuWrap = styled.nav`

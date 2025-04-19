@@ -3,7 +3,7 @@ import { LikeResponse } from "@/types/Like/like";
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 
-export const Like = async (postId: number): Promise<LikeResponse> => {
+export const likeToggle = async (postId: number): Promise<LikeResponse> => {
     try {
         const { data } = await axios.post<LikeResponse>(`${SERVER_URL}/api/like/${postId}`);
         return data;

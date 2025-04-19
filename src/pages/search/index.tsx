@@ -1,5 +1,5 @@
 import * as S from "./style";
-import SearchBar from "@/components/Common/SearchBar";
+import SearchBar from "@/components/common/SearchBar";
 
 const Search = () => {
   return (

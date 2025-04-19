@@ -1,5 +1,5 @@
 import * as S from "./style";
-import Banner from "@/components/Common/Banner";
+import Banner from "@/components/common/Banner";
 
 const Home = () => {
   return (

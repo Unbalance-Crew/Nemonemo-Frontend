@@ -1,5 +1,5 @@
-import InfoBox from '@/components/Profile/InfoBox';
-import FollowStatsBar from '@/components/Profile/FollowStatsBar';
+import InfoBox from '@/components/profile/InfoBox';
+import FollowStatsBar from '@/components/profile/FollowStatsBar';
 import * as S from './style';
 
 const myProfile = () => {

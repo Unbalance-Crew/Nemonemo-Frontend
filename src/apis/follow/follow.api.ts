@@ -3,7 +3,7 @@ import { FollowUnFollowResponse, FollowCountResponse } from "@/types/Follow/foll
 
 const SERVER_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:5173";
 
-export const followToggle = async (followingId: number): Promise<FollowUnFollowResponse> => {
+export const followToggle = async ( followingId: number ): Promise<FollowUnFollowResponse> => {
     try {
         const { data } = await motreeAxios.post<FollowUnFollowResponse>(`/api/follows/${followingId}`);
         return data;
@@ -12,7 +12,7 @@ export const followToggle = async (followingId: number): Promise<FollowUnFollowR
     };
 };
 
-export const getFollowCount = async (username: string): Promise<FollowCountResponse> => {
+export const getFollowCount = async ( username: string ): Promise<FollowCountResponse> => {
     try {
         const { data } = await motreeAxios.get<FollowCountResponse>(`/api/follows/${username}/count`);
         return data;

@@ -3,7 +3,8 @@ import Styled from 'styled-components';
 export const Container = Styled.div`
     display: flex;
     margin-top: 0.5rem;
-    margin-left: 58rem;
+    margin-left: 60rem;
+    cursor: pointer;
 `
 
 export const Stat = Styled.div`

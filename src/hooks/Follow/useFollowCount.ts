@@ -15,8 +15,9 @@ const useFollowCount = (username?: string) => {
                     ? await getFollowCount(username)
                     : await getMyFollowCount();
                 setData(response);
+                console.log('팔로잉 팔로워 수 조회 성공', response);
             } catch (error) {
-                console.error('Error fetching follow count:', error);
+                console.error('내 팔로잉 팔로워 수 조회 요청 실패', error);
             };
         };
         fetchFollowCount();
